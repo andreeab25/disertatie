@@ -1,7 +1,10 @@
-function Topbar() {
+function Topbar({ title, actions }) {
     return (
       <div className="topbar">
-        <span>Account</span>
+        <span className="topbar-title">{title}</span>
+        <div className="topbar-actions">
+          {actions}
+        </div>
       </div>
     );
   }

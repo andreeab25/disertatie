@@ -1,5 +1,6 @@
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import CustomPieChart from "../components/CustomPieChart";
 import { PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 const statCards = [
@@ -51,14 +52,7 @@ function Analytics() {
           <div className="card" style={{ flex: "1 1 300px", height: 300 }}>
             <h3>Distribuție emoții</h3>
             <ResponsiveContainer width="100%" height="85%">
-              <PieChart>
-                <Pie data={pieData} dataKey="value" nameKey="name" outerRadius={80} fill="#8884d8" label>
-                  {pieData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={pieColors[index % pieColors.length]} />
-                  ))}
-                </Pie>
-                <Legend verticalAlign="bottom" />
-              </PieChart>
+              <CustomPieChart />
             </ResponsiveContainer>
           </div>
 
