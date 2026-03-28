@@ -7,6 +7,7 @@ import Analytics from "./pages/Analytics";
 import PatientDashboard from "./pages/PatientDashboard";
 import MyRecordings from "./pages/MyRecordings";
 import Appointments from "./pages/Appointments";
+import ChangePassword from "./pages/ChangePassword";
 
 // Redirect based on role after login
 function RoleRedirect() {
@@ -39,6 +40,7 @@ function App() {
       <Route path="/patient/:id"    element={<PsychologistRoute element={<PatientPage />} />} />
       <Route path="/video/:id"      element={<PsychologistRoute element={<VideoSession />} />} />
       <Route path="/analytics"      element={<PsychologistRoute element={<Analytics />} />} />
+      <Route path="/change-password" element={<ChangePassword />} />
 
       <Route path="/patient-dashboard" element={<PatientRoute element={<PatientDashboard />} />} />
       <Route path="/my-recordings"     element={<PatientRoute element={<MyRecordings />} />} />
